@@ -3,7 +3,7 @@
 // two way to find the factorial of a  number;
 
 // 1.>
-/*
+
 
 include<bits/stdc++.h>
 using namespace std;
@@ -22,7 +22,6 @@ int main()
 }
 
 
-*/
 
 // 2nd way to solve the factorali of the a number;
 
