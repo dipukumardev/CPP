@@ -103,3 +103,17 @@ int main()
         ptr--;
     }
 }
+
+
+// use the char arrays to solve the pointer and print the first char;
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    char arr[] = "1 2 3 4 5";
+    char *ptr = arr;
+    
+    cout<< *(ptr);
+    return 0;
+}
