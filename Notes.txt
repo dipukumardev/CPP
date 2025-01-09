@@ -1,0 +1,5 @@
+Ternary Search
+
+.Sorted Arrays (implements only);
+.Time Complexity: O(log3 n); bigof (log base3 n);
+.Similar to the Binary Search but divide into 3 parts;
