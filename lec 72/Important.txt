@@ -1,0 +1,9 @@
+#Encapsulation:- Wrapping of Class & Informatio in a single unit, while Controlling access to them.
+Direct access nahi hai with the help of function that can access of the pravite data;
+
+
+
+
+#Abstraction:-Displaying only essential information & hiding the details.
+
+eg:- Hotal Meanu, use some function in cpp like :- pow(2,4) // get the answer but do not understand the backend work;
