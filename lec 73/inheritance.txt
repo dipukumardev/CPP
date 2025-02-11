@@ -1,0 +1,14 @@
+Define Inheritance:- The Capability of a class to derive property & Characteristic From another class.
+            (int main(start))
+             External Code              Within Class             Derive Class
+
+Public :     yes                            yes                  yes
+
+Protected : No                             yes                   yes
+
+Private :  No                              yes                   No
+
+
+
+
+Imp Lecture so Doubel see the Lecture;
