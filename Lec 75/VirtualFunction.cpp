@@ -1,4 +1,5 @@
 #include <iostream>
+#include<vector>
 using namespace std;
 
 // Virtual Function;
@@ -7,7 +8,7 @@ class Animal
 public:
     virtual void speak()
     {
-        cout << "Hu Hu";
+        cout << "Hu Hu" << endl;
     }
 };
 
@@ -17,16 +18,41 @@ class Dog : public Animal
 public:
     void speak()
     {
-        cout << "Break";
+        cout << "Break" << endl;
+    }
+};
+
+class Cat : public Animal
+{
+public:
+    void speak()
+    {
+        cout << "Meow" << endl;
     }
 };
 int main()
 {
+    // Animal *p;
+    // p = new Dog();
+
+    // p->speak(); // Call speak() (dynamic binding due to virtual function)
+
+    // delete p; // Free allocated memory to prevent memory leaks
+
     Animal *p;
-    p = new Dog();
+    vector<Animal*> animals;
+    animals.push_back(new Dog());
+    animals.push_back(new Cat());
+    animals.push_back(new Animal());
+    animals.push_back(new Dog());
+    animals.push_back(new Cat());
 
-    p->speak(); // Call speak() (dynamic binding due to virtual function)
+    // All in one line cal
+    for (int i = 0; i < animals.size(); i++)
+    {
+        p = animals[i];
+        p->speak();
+    }
 
-    delete p; // Free allocated memory to prevent memory leaks
     return 0;
 }
