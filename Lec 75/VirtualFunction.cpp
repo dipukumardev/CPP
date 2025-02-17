@@ -10,6 +10,13 @@ public:
     {
         cout << "Hu Hu" << endl;
     }
+
+
+    // pure Virtural function:
+    // it have a functuin Direct OBj Create nahi kar saktay;
+    // virtual void speak() = 0;
+
+
 };
 
 // Create a another class;
