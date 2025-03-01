@@ -39,3 +39,6 @@ int main()
     int ans = isornot(str1, str2);
     cout << "Postion of the str2 of starting index is :" << ans;
 }
+
+// Time Complexity: o(nm);
+// Space Complexity:o(1);

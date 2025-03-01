@@ -1,0 +1,93 @@
+// ittrative approch;
+
+#include<bits/stdc++.h>
+using namespace std;
+
+long long ifornot(int n)
+{
+    long long result = 1;
+    for(int i =1; i<=n; i++)
+    {
+        result *=i;
+    }
+    return result;
+}
+int main()
+{
+    int n;
+    cout<<"Enter the value of the N:";
+    cin>>n;
+    int ans  =ifornot(n);
+    cout<<ans;
+}
+
+
+
+// Recursive approch;
+
+#include<bits/stdc++.h>
+using namespace std;
+
+long long ifornot(int n)
+{
+   if(n==0 || n ==1)
+   {
+       return 1;
+   }
+   return n*ifornot(n-1);
+}
+int main()
+{
+    int n;
+    cout<<"Enter the value of the N:";
+    cin>>n;
+    int ans  =ifornot(n);
+    cout<<ans;
+}
+
+
+
+
+
+
+Find the Missing and Reapting Elements in the Arrays:(Brute Force Approch)
+
+#include<bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int arr[5] = {1,3,4,5,4};
+    
+    int Missing = -1;
+    int Reapting = -1;
+    
+    for(int i = 0; i<5 ; i++)
+    {
+        int count = 0;
+        for(int j = 0; j< 5; j++)
+        {
+            if(arr[j] == i)
+            {
+                count++;
+            }
+        }
+        if(count == 2)
+        {
+            Reapting = i;
+        }
+        else if(count ==0)
+        {
+            Missing = i;
+        }
+    if(Missing != -1 && Reapting != -1)
+    {
+        break;
+    }
+    }
+    cout<<"Missing Elements is: " <<Missing  << " ";
+    cout<<"Reaptingn Elements is : "<<Reapting;
+}
+
+Time Complexity: o(n2);
+Space Complexity: o(1);
+
