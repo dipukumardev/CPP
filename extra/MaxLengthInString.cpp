@@ -1,16 +1,16 @@
-#include<bits/stdc++.h>
+#include <bits/stdc++.h>
 using namespace std;
 int main()
 {
     string para = "Dipu Sing is a SDE-II in the google";
-    int count = 0; 
+    int count = 0;
     int maxcout = 0;
-    
-    for(int i =0 ; i<para.length(); i++)
+
+    for (int i = 0; i < para.length(); i++)
     {
-        if(para[i] == ' ')
+        if (para[i] == ' ')
         {
-            if(count > maxcout)
+            if (count > maxcout)
             {
                 maxcout = count;
             }
@@ -21,10 +21,10 @@ int main()
             count++;
         }
     }
-    if(count > maxcout)
+    if (count > maxcout)
     {
         maxcout = count;
     }
-    
-    cout<<count;
+
+    cout << count;
 }
