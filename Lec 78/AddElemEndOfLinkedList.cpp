@@ -32,6 +32,11 @@ int main()
             tail = tail->next;
         }
     }
+    // Add a new node at the end of the Linkedlist;
+    tail->next = new Node(28);
+    tail = tail->next;
+
+    // printing the all Nodes;
     Node *temp;
     temp = Head;
     while (temp)
