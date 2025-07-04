@@ -32,13 +32,5 @@ int main()
         cout<<result[i] <<" ";
     }
     
-    
-    
-    
-    
-    
-    
-    
-    
-    
+    // Wrost Case;
 }
