@@ -1,13 +1,17 @@
-#include<bits/stdc++.h>
+
+
+// This code Valid for only Positive Number:
+
+#include <bits/stdc++.h>
 using namespace std;
 
-
-class Stack{
+class Stack
+{
     int *arr;
     int size;
     int top;
-    
-   public:
+
+public:
     // Constructor;
     Stack(int s)
     {
@@ -16,42 +20,42 @@ class Stack{
         arr = new int[s];
     }
     // Push oprations;
-    void Push (int value)
+    void Push(int value)
     {
-        if(top == size-1)
+        if (top == size - 1)
         {
-            cout<<"Stack Overflow:";
+            cout << "Stack Overflow:";
             return;
         }
         else
         {
             top++;
             arr[top] = value;
-            cout<<"Push " << value  << " into the Stack" <<endl;
+            cout << "Push " << value << " into the Stack" << endl;
         }
     }
-    
+
     // Pop oprations:
     void Pop()
     {
-        if(top == -1)
+        if (top == -1)
         {
-            cout<<"Stack Underflow";
+            cout << "Stack Underflow";
             return;
         }
         else
         {
-            cout<< " Pop " << arr[top] <<" Of the Stack";
+            cout << " Pop " << arr[top] << " Of the Stack" << endl;
             top--;
         }
     }
-    
+
     // Stack Top
-    bool Top()
+    int Top()
     {
-        if(top == -1)
+        if (top == -1)
         {
-            cout<<"Stack is empty:";
+            cout << "Stack is empty:";
             return -1;
         }
         else
@@ -59,30 +63,37 @@ class Stack{
             return arr[top];
         }
     }
-    
+
     // Stack Empty;
     bool isEmpty()
     {
         return top == -1;
     }
-    
+
     // Stack Size;
     int isSize()
     {
-        return top+1;
+        return top + 1;
     }
 };
 int main()
 {
-    
+
     Stack S(5);
     S.Push(5);
-    S.Push(6); 
+    S.Push(6);
     S.Push(7);
     S.Push(8);
     S.Push(9);
-    
+
     // pop
     S.Pop();
-        
+
+    // Top Elements;
+    cout << "Top Element in Stack is:" << S.Top() << endl;
+
+    // Is Empty or Not:
+    cout << "Stack is " << S.isEmpty() << endl;
+    // Is Size of the Arrays:
+    cout << "Stack Atual Size is:" << S.isSize() << endl;
 }
