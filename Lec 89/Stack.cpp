@@ -97,3 +97,125 @@ int main()
     // Is Size of the Arrays:
     cout << "Stack Atual Size is:" << S.isSize() << endl;
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Second Time;
+
+#include<bits/stdc++.h>
+using namespace std;
+// Create a Node;
+class Node
+{
+    public:
+    int data;
+    Node *next;
+    
+    // Create a constructure;
+    Node(int value)
+    {
+        data = value;
+        next = NULL;
+    }
+};
+
+// Than start to create a stack;
+
+class Stack
+{
+    Node *Top;
+    int Currentsize; // it can helps to know the Actual size of the Linkedlist;
+    
+    public:
+    Stack()
+    {
+        Top = NULL;
+        Currentsize = 0;
+    }
+    
+    // push
+    void push(int value)
+    {
+        Node *temp = new Node(value);
+        // In the Case of full of Heap Memory;
+        if(temp == NULL)
+        {
+            cout<<"Stack is OverFlow";
+            return;
+        }
+        else{
+        temp -> next = Top;
+        Top = temp;
+        Currentsize++;
+        }
+    }
+    // pop
+    void pop()
+    {
+        if(Top == NULL)
+        {
+            cout<<"Stack Underflow";
+            return;
+        }
+        else
+        {
+            Node * temp = Top;
+            Top = Top->next;
+            delete temp;
+            Currentsize--;
+        }
+    }
+    
+    // Peek;
+    int peek()
+    {
+        if(Top == NULL)
+        {
+            cout<<"Stack is Empty";
+            return -1;
+        }
+        else
+        {
+            return Top->data;
+        }
+    }
+    
+    // Empty
+    bool IsEmpty()
+    {
+        return Top == NULL;
+    }
+    
+    // Is Size
+    int size()
+    {
+        return Currentsize;
+    }
+};
+
+int main()
+{
+    
+    Stack S;
+    S.push(5);
+    S.push(5);
+    S.push(5);
+    S.push(5);
+    S.push(5);
+    S.push(5);
+    
+    S.pop();
+    cout<<S.size();
+    
+}
